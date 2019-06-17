@@ -29,7 +29,9 @@ describe("lib/resolve-release-notes", () => {
 		)
 	);
 
-	it("Should resolve date", () => assert.equal(resolvedReleases.get("7.7.0").date, "2019-04-09"));
+	it("Should resolve date string", () =>
+		assert.equal(resolvedReleases.get("7.7.0").dateString, "2019-04-09")
+	);
 
 	it("Should resolve rich notes", () =>
 		assert.equal(
