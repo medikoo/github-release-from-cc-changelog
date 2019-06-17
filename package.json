@@ -1,12 +1,16 @@
 {
-	"name": "CHANGEME",
+	"name": "gh-release-from-cc-changelog",
 	"version": "1.0.0",
-	"description": "CHANGEME",
+	"description": "Create/update Github release notes from a CHANGELOG",
 	"author": "Mariusz Nowak <medyk@medikoo.com> (https://www.medikoo.com/)",
 	"keywords": [
-		"CHANGEME"
+		"conventional-commits",
+		"github",
+		"release",
+		"github-release",
+		"changelog"
 	],
-	"repository": "medikoo/CHANGEME",
+	"repository": "medikoo/gh-release-from-cc-changelog",
 	"devDependencies": {
 		"eslint": "^5.16.0",
 		"eslint-config-medikoo": "^2.3.0",
