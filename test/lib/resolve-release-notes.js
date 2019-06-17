@@ -22,9 +22,9 @@ describe("lib/resolve-release-notes", () => {
 		)
 	);
 
-	it("Should resolve changes url", () =>
+	it("Should resolve comparision url", () =>
 		assert.equal(
-			resolvedReleases.get("7.7.1").changesUrl,
+			resolvedReleases.get("7.7.1").comparisionUrl,
 			"https://github.com/medikoo/npm-cross-link/compare/v7.7.0...v7.7.1"
 		)
 	);
