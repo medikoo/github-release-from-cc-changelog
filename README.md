@@ -16,8 +16,8 @@ npm i -g github-release-from-cc-changelog
 ## Prerequisites
 
 - Github url needs to be configured at package.json `repository` field
-- [Create a new token](https://github.com/settings/tokens/new) and set your environment variable `CONVENTIONAL_GITHUB_RELEASER_TOKEN` to the token you just created. The scopes for the token you need is `public_repo` or `repo` (if you need to access private repos).
-- Tags for given versions need to be pre-pushed to repository at GitHub
+- Ensure GitHub [access token](https://github.com/settings/tokens/new) available at `CONVENTIONAL_GITHUB_RELEASER_TOKEN` environment variable. The scopes for the token you need is `public_repo` or `repo` (if you need to access private repos).
+- Tags for given versions need to exist in GitHub repository before command is issued
 
 ## Usage
 
