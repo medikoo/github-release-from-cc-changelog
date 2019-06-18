@@ -11,8 +11,8 @@
 		"changelog"
 	],
 	"bin": {
-		"github-release-from-cc-changelog": "./bin/github-release-from-cc-changelog/index.js",
-		"github-release-all-from-cc-changelog": "./bin/github-release-all-from-cc-changelog/index.js"
+		"github-release-from-cc-changelog": "./bin/github-release-from-cc-changelog.js",
+		"github-release-all-from-cc-changelog": "./bin/github-release-all-from-cc-changelog.js"
 	},
 	"repository": "medikoo/gh-release-from-cc-changelog",
 	"dependencies": {
