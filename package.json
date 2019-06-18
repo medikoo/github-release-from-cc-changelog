@@ -1,5 +1,5 @@
 {
-	"name": "gh-release-from-cc-changelog",
+	"name": "github-release-from-cc-changelog",
 	"version": "1.0.0",
 	"description": "Create/update Github release notes from a CHANGELOG",
 	"author": "Mariusz Nowak <medyk@medikoo.com> (https://www.medikoo.com/)",
