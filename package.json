@@ -11,12 +11,14 @@
 		"changelog"
 	],
 	"bin": {
-		"github-release-from-cc-changelog": "./bin/github-release-from-cc-changelog/index.js"
+		"github-release-from-cc-changelog": "./bin/github-release-from-cc-changelog/index.js",
+		"github-release-all-from-cc-changelog": "./bin/github-release-all-from-cc-changelog/index.js"
 	},
 	"repository": "medikoo/gh-release-from-cc-changelog",
 	"dependencies": {
 		"@octokit/rest": "^16.28.2",
 		"chalk": "^2.4.2",
+		"cli-progress-footer": "^1.1.1",
 		"essentials": "^1.0.0",
 		"event-emitter": "^0.3.5",
 		"minimist": "^1.2.0",
