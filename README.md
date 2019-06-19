@@ -35,7 +35,7 @@ e.g.
 github-release-from-cc-changelog 1.0.0
 ```
 
-#### Reseolve and publish notes for all versions
+#### Resolve and publish notes for all versions
 
 At package directory run:
 
