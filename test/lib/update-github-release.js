@@ -22,6 +22,7 @@ describe("lib/update-github-release", () => {
 	});
 
 	it("Should create a new release if it's not created for an existing tag", async () => {
+		createReleaseSpy.reset();
 		await updateGithubRelease("medikoo/gh-release-from-cc-changelog", "0.1.3", {
 			comparisonUrl: "https://github.com/medikoo/npm-cross-link/compare/v7.7.1...v7.7.2",
 			dateString: "2019-05-16"
@@ -31,6 +32,7 @@ describe("lib/update-github-release", () => {
 	});
 
 	it("Should update existing release", async () => {
+		updateReleaseSpy.reset();
 		await updateGithubRelease("medikoo/gh-release-from-cc-changelog", "1.4.0", {
 			comparisonUrl: "https://github.com/medikoo/npm-cross-link/compare/v7.7.1...v7.7.2",
 			dateString: "2019-05-16"

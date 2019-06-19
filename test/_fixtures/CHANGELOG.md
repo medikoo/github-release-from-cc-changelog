@@ -241,7 +241,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 <a name="5.0.0"></a>
 
-# [5.0.0](https://github.com/medikoo/npm-cross-link/compare/v4.0.0...v5.0.0) (2019-01-31)
+# [1.4.0](https://github.com/medikoo/npm-cross-link/compare/v4.0.0...v5.0.0) (2019-01-31)
 
 ### Bug Fixes
 
