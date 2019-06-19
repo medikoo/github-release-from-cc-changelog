@@ -64,7 +64,7 @@
 				}
 			},
 			{
-				"files": "test/lib/_fixtures/**/*.js",
+				"files": "test/_fixtures/**/*.js",
 				"rules": {
 					"camelcase": "off",
 					"max-lines": "off"

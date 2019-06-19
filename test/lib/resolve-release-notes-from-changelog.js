@@ -4,7 +4,7 @@ const { resolve }         = require("path")
     , { assert }          = require("chai")
     , resolveReleaseNotes = require("../../lib/resolve-release-notes-from-changelog");
 
-const testChangelogPath = resolve(__dirname, "./_fixtures/CHANGELOG.md");
+const testChangelogPath = resolve(__dirname, "../_fixtures/CHANGELOG.md");
 
 describe("lib/resolve-release-notes", () => {
 	let resolvedReleases;

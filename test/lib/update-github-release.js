@@ -6,10 +6,10 @@ const { assert } = require("chai")
 
 const ghResponses = {
 	getReleaseByTagName: {
-		success: require("./_fixtures/github-rest/get-release-by-tag"),
-		error: require("./_fixtures/github-rest/get-release-by-tag.error")
+		success: require("../_fixtures/github-rest/get-release-by-tag"),
+		error: require("../_fixtures/github-rest/get-release-by-tag.error")
 	},
-	listTags: { success: require("./_fixtures/github-rest/list-tags") }
+	listTags: { success: require("../_fixtures/github-rest/list-tags") }
 };
 
 /* eslint-disable require-await */
