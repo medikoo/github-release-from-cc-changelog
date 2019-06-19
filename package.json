@@ -11,6 +11,7 @@
 		"changelog"
 	],
 	"bin": {
+		"dump-release-notes-from-cc-changelog": "./bin/dump-release-notes-from-cc-changelog.js",
 		"github-release-from-cc-changelog": "./bin/github-release-from-cc-changelog.js",
 		"github-release-all-from-cc-changelog": "./bin/github-release-all-from-cc-changelog.js"
 	},

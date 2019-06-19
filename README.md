@@ -43,6 +43,16 @@ At package directory run:
 github-release-all-from-cc-changelog
 ```
 
+#### Dump release notes for given version
+
+Useful also to verify whether notes for given version can be retrieved
+
+At package directory run:
+
+```bash
+dump-release-notes-from-cc-changelog <version>
+```
+
 ### Programmatically
 
 ```javascript
