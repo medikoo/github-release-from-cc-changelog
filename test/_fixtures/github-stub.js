@@ -14,7 +14,7 @@ const ghResponses = {
 	listTags: { success: require("./github-rest/list-tags") }
 };
 
-overrideEnv(() => {
+overrideEnv({ asCopy: true }, () => {
 	process.env.CONVENTIONAL_GITHUB_RELEASER_TOKEN = "tmp";
 	require("../../lib/private/github");
 });
