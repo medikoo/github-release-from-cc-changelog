@@ -1,6 +1,7 @@
 "use strict";
 
-const sandbox = require("sinon");
+const sandbox     = require("sinon")
+    , overrideEnv = require("process-utils/override-env");
 
 const createReleaseSpy = sandbox.stub().returns(Promise.resolve({}));
 const updateReleaseSpy = sandbox.stub().returns(Promise.resolve({}));
@@ -13,8 +14,13 @@ const ghResponses = {
 	listTags: { success: require("./github-rest/list-tags") }
 };
 
+overrideEnv(() => {
+	process.env.CONVENTIONAL_GITHUB_RELEASER_TOKEN = "tmp";
+	require("../../lib/private/github");
+});
+
 /* eslint-disable require-await */
-module.exports = {
+module.exports = require.cache[require.resolve("../../lib/private/github")].exports = {
 	"repos": {
 		getReleaseByTag: async ({ tag }) => {
 			if (tag === "v0.0.1") throw ghResponses.getReleaseByTagName.error;

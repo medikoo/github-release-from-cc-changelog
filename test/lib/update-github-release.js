@@ -1,12 +1,8 @@
 "use strict";
 
-const { assert } = require("chai")
-    , proxyquire = require("proxyquire")
-    , githubStub = require("../_fixtures/github-stub");
-
-const updateGithubRelease = proxyquire("../../lib/update-github-release", {
-	"./private/github": githubStub
-});
+const { assert }          = require("chai")
+    , githubStub          = require("../_fixtures/github-stub")
+    , updateGithubRelease = require("../../lib/update-github-release");
 
 const createReleaseSpy = githubStub.repos.createRelease;
 const updateReleaseSpy = githubStub.repos.updateRelease;
