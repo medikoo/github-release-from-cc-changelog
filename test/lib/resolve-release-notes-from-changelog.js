@@ -2,7 +2,7 @@
 
 const { resolve }         = require("path")
     , { assert }          = require("chai")
-    , resolveReleaseNotes = require("../../lib/resolve-release-notes");
+    , resolveReleaseNotes = require("../../lib/resolve-release-notes-from-changelog");
 
 const testChangelogPath = resolve(__dirname, "./_fixtures/CHANGELOG.md");
 

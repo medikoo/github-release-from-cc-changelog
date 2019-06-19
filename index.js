@@ -4,7 +4,7 @@ const ensureString        = require("type/string/ensure")
     , { resolve }         = require("path")
     , UserError           = require("./lib/private/user-error")
     , resolveRepoUrl      = require("./lib/private/resolve-repo-url")
-    , resolveReleaseNotes = require("./lib/resolve-release-notes")
+    , resolveReleaseNotes = require("./lib/resolve-release-notes-from-changelog")
     , updateGithubRelease = require("./lib/update-github-release");
 
 module.exports = async (packagePath, version) => {
