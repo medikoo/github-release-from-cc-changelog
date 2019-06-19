@@ -72,6 +72,14 @@
 			}
 		]
 	},
+	"nyc": {
+		"all": true,
+		"exclude": [
+			"bin/**",
+			"coverage/**",
+			"test/**"
+		]
+	},
 	"prettier": {
 		"printWidth": 100,
 		"tabWidth": 4,
