@@ -17,7 +17,7 @@ const usage = `github-release-from-cc-changelog v${ meta.version }
 
 Usage: github-release-from-cc-changelog [-h | --help] <packageVersion>
 
-Resolve from CHANGELOG.md and puublish release notes of given version to GitHub
+Resolve from CHANGELOG.md and publish release notes for given version to GitHub
 (note: version tag should already be pushed to GitHub)
 
 Options:
