@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/medikoo/gh-release-from-cc-changelog/compare/v2.0.0...v2.1.0) (2019-06-20)
+
+### Features
+
+- Support pass of GitHub token with GITHUB_TOKEN or GH_TOKEN env var ([d85888e](https://github.com/medikoo/gh-release-from-cc-changelog/commit/d85888e))
+
+### Tests
+
+- Ensure to override env as copy ([8604b2c](https://github.com/medikoo/gh-release-from-cc-changelog/commit/8604b2c))
+
 ## [2.0.0](https://github.com/medikoo/gh-release-from-cc-changelog/compare/v1.0.1...v2.0.0) (2019-06-19)
 
 ### Features
