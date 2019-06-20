@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/medikoo/gh-release-from-cc-changelog/compare/v2.1.0...v2.2.0) (2019-06-20)
+
+### Features
+
+- Support 'v' prefixed version input in CLI ([a3b3e08](https://github.com/medikoo/gh-release-from-cc-changelog/commit/a3b3e08))
+
 ## [2.1.0](https://github.com/medikoo/gh-release-from-cc-changelog/compare/v2.0.0...v2.1.0) (2019-06-20)
 
 ### Features

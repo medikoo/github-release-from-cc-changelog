@@ -1,6 +1,6 @@
 {
 	"name": "github-release-from-cc-changelog",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"description": "Create/update Github release notes from a CHANGELOG",
 	"author": "Mariusz Nowak <medyk@medikoo.com> (https://www.medikoo.com/)",
 	"keywords": [
