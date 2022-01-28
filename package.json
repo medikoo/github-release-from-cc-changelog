@@ -18,7 +18,7 @@
 	"repository": "medikoo/gh-release-from-cc-changelog",
 	"dependencies": {
 		"@octokit/rest": "^18.12.0",
-		"chalk": "^2.4.2",
+		"chalk": "^3.0.0",
 		"cli-progress-footer": "^1.1.1",
 		"essentials": "^1.2.0",
 		"event-emitter": "^0.3.5",
