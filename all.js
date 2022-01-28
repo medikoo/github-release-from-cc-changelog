@@ -10,7 +10,7 @@ const ensureString           = require("type/string/ensure")
 
 module.exports = function (packagePath) {
 	const promise = ee(
-		new Promise(resolvePromise =>
+		new Promise(resolvePromise => {
 			resolvePromise(
 				(async () => {
 					packagePath = resolve(ensureString(packagePath));
@@ -45,8 +45,8 @@ module.exports = function (packagePath) {
 						}`
 					);
 				})()
-			)
-		)
+			);
+		})
 	);
 	return promise;
 };
