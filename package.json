@@ -37,7 +37,7 @@
 		"lint-staged": "^12.3.2",
 		"mocha": "^7.2.0",
 		"ncjsm": "^4.3.0",
-		"nyc": "^14.1.1",
+		"nyc": "^15.1.0",
 		"prettier-elastic": "^1.19.1",
 		"process-utils": "^2.6.0",
 		"sinon": "^7.5.0"
