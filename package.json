@@ -104,5 +104,8 @@
 		"prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'",
 		"test": "mocha --recursive"
 	},
+	"engines": {
+		"node": ">=8.0"
+	},
 	"license": "ISC"
 }
