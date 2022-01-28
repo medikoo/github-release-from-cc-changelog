@@ -39,7 +39,7 @@
 		"ncjsm": "^4.3.0",
 		"nyc": "^15.1.0",
 		"prettier-elastic": "^2.2.1",
-		"process-utils": "^2.6.0",
+		"process-utils": "^3.1.0",
 		"sinon": "^7.5.0"
 	},
 	"husky": {
