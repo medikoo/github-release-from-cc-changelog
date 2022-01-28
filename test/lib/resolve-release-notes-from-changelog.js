@@ -19,19 +19,16 @@ describe("lib/resolve-release-notes", () => {
 				"6.1.0", "6.0.0", "5.1.0", "5.0.2", "5.0.1", "1.4.0"
 			],
 			Array.from(resolvedReleases.keys())
-		)
-	);
+		));
 
 	it("Should resolve comparison url", () =>
 		assert.equal(
 			resolvedReleases.get("7.7.1").comparisonUrl,
 			"https://github.com/medikoo/npm-cross-link/compare/v7.7.0...v7.7.1"
-		)
-	);
+		));
 
 	it("Should resolve date string", () =>
-		assert.equal(resolvedReleases.get("7.7.0").dateString, "2019-04-09")
-	);
+		assert.equal(resolvedReleases.get("7.7.0").dateString, "2019-04-09"));
 
 	it("Should resolve rich notes", () =>
 		assert.equal(
@@ -45,8 +42,7 @@ describe("lib/resolve-release-notes", () => {
 				"- ensure cleanup on name mismatch ([61543a8](https://github.com/medikoo/npm-cross-link/commit/61543a8))",
 				""
 			].join("\n")
-		)
-	);
+		));
 
 	it("Should resolve no notes", () => assert.equal(resolvedReleases.get("7.7.1").notes, null));
 });

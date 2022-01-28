@@ -24,6 +24,5 @@ describe("resolve-release-notes", () => {
 				"### BREAKING CHANGES\n\n- package-lock.json is now automatically removed " +
 				"for link dependencies.\n  As they serve as libraries, so package lock " +
 				"servse no purpose for them\n"
-		})
-	);
+		}));
 });

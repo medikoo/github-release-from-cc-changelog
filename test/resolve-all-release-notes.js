@@ -12,6 +12,5 @@ describe("resolve-all-release-notes", () => {
 	before(async () => { resolvedReleases = await resolveAllReleaseNotes(testPackagePath); });
 
 	it("Should resolve all releases", () =>
-		assert.deepEqual(["1.4.0", "0.1.3"], Array.from(resolvedReleases.keys()))
-	);
+		assert.deepEqual(["1.4.0", "0.1.3"], Array.from(resolvedReleases.keys())));
 });
