@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.1](https://github.com/medikoo/gh-release-from-cc-changelog/compare/v2.2.0...v2.2.1) (2022-01-28)
+
+### Maintenance Improvements
+
+- Do not return value in executor function ([b7a2837](https://github.com/medikoo/gh-release-from-cc-changelog/commit/b7a283752d1721de3a220a0de380ece606032638))
+- Upgrade `@octokit/rest` to v17 ([ca34873](https://github.com/medikoo/gh-release-from-cc-changelog/commit/ca348736bac5df44945148f729ae88d7f6529e9f))
+- Upgrade `@octokit/rest` to v18 ([89ecabd](https://github.com/medikoo/gh-release-from-cc-changelog/commit/89ecabda4c1351053ed931576aa5001a65086b92))
+- Upgrade `chalk` to v3 ([5055654](https://github.com/medikoo/gh-release-from-cc-changelog/commit/5055654f3134a6c10504e4ff173e6149716c2ef6))
+- Upgrade `type` to v2 ([f590985](https://github.com/medikoo/gh-release-from-cc-changelog/commit/f59098579cc87f1755c529bc4087a7ae1f3341e5))
+
 ## [2.2.0](https://github.com/medikoo/gh-release-from-cc-changelog/compare/v2.1.0...v2.2.0) (2019-06-20)
 
 ### Features
