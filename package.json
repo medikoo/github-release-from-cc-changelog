@@ -77,8 +77,15 @@
 	"nyc": {
 		"all": true,
 		"exclude": [
+			".github",
 			"coverage/**",
-			"test/**"
+			"test/**",
+			"*.config.js"
+		],
+		"reporter": [
+			"lcov",
+			"html",
+			"text-summary"
 		]
 	},
 	"prettier": {
@@ -97,7 +104,7 @@
 	},
 	"scripts": {
 		"check-coverage": "npm run coverage && nyc check-coverage --statements 50 --function 50 --branches 40 --lines 50",
-		"coverage": "nyc --reporter=lcov --reporter=html --reporter=text-summary npm test",
+		"coverage": "nyc npm test",
 		"lint": "eslint --ignore-path=.gitignore .",
 		"lint:updated": "pipe-git-updated --ext=js -- eslint --ignore-pattern '!*'",
 		"prettier-check": "prettier -c --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
