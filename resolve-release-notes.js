@@ -5,14 +5,18 @@ const ensureString           = require("type/string/ensure")
     , UserError              = require("./lib/private/user-error")
     , resolveAllReleaseNotes = require("./resolve-all-release-notes");
 
-module.exports = async (packagePath, version) => {
+module.exports = async (packagePath, versionInput) => {
 	packagePath = resolve(ensureString(packagePath));
-	version = ensureString(version);
+	versionInput = ensureString(versionInput);
+
+	const version = versionInput.includes("@")
+		? versionInput.slice(versionInput.lastIndexOf("@") + 1)
+		: versionInput;
 
 	const versionReleaseNotes = (await resolveAllReleaseNotes(packagePath)).get(version);
 
 	if (!versionReleaseNotes) {
-		throw new UserError(`Could not find release notes for version ${ version }`);
+		throw new UserError(`Could not find release notes for version ${ versionInput }`);
 	}
 
 	return versionReleaseNotes;

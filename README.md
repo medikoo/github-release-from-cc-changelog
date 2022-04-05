@@ -16,7 +16,7 @@ npm i -g github-release-from-cc-changelog
 
 - Github url needs to be configured at package.json `repository` field
 - Ensure GitHub [access token](https://github.com/settings/tokens/new) available at `CONVENTIONAL_GITHUB_RELEASER_TOKEN` (or `GITHUB_TOKEN`) environment variable. The scopes for the token you need is `public_repo` or `repo` (if you need to access private repos).
-- Tags for given versions need to exist in GitHub repository before pushing release notes
+- Tags for given versions need to exist in GitHub repository before pushing release notes. Tags need to follow format of `v<version>`, or in case of multi-package repositories follow format of `<packageName>@<version>`
 
 ## Usage
 
@@ -25,16 +25,10 @@ npm i -g github-release-from-cc-changelog
 At package directory run:
 
 ```bash
-github-release-from-cc-changelog <version>
+github-release-from-cc-changelog <versionTag>
 ```
 
 e.g.
-
-```bash
-github-release-from-cc-changelog 1.0.0
-```
-
-Version can be prefixed with `v` as:
 
 ```bash
 github-release-from-cc-changelog v1.0.0
@@ -48,6 +42,12 @@ At package directory run:
 github-release-all-from-cc-changelog
 ```
 
+By default `v` is assumed as tag postfix. In case of multi package repositories this can be overriden by passing `--tag-prefix` e.g.:
+
+```bash
+github-release-all-from-cc-changelog --tag-prefix=subpackage@
+```
+
 #### Dump release notes for given version
 
 Useful also to verify whether notes for given version can be retrieved
@@ -55,7 +55,7 @@ Useful also to verify whether notes for given version can be retrieved
 At package directory run:
 
 ```bash
-dump-release-notes-from-cc-changelog <version>
+dump-release-notes-from-cc-changelog <versionTag>
 ```
 
 ### Programmatically
@@ -63,8 +63,8 @@ dump-release-notes-from-cc-changelog <version>
 ```javascript
 const releaseFromChangelog = require("github-release-from-cc-changelog");
 
-releaseFromChangelog(packageDirectory, version).then(() => {
-  console.log(`Successfully pushed release notes for version ${ version }`);
+releaseFromChangelog(packageDirectory, versionTag).then(() => {
+  console.log(`Successfully pushed release notes for "${ versionTag }"`);
 });
 ```
 

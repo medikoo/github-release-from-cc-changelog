@@ -1,6 +1,7 @@
 "use strict";
 
 const ensureString           = require("type/string/ensure")
+    , isObject               = require("type/object/is")
     , ee                     = require("event-emitter")
     , { resolve }            = require("path")
     , UserError              = require("./lib/private/user-error")
@@ -8,13 +9,15 @@ const ensureString           = require("type/string/ensure")
     , updateGithubRelease    = require("./lib/update-github-release")
     , resolveAllReleaseNotes = require("./resolve-all-release-notes");
 
-module.exports = function (packagePath) {
+module.exports = function (packagePath, options = {}) {
 	const promise = ee(
 		new Promise(resolvePromise => {
 			resolvePromise(
 				(async () => {
+					if (!isObject(options)) options = {};
 					packagePath = resolve(ensureString(packagePath));
 					const repoUrl = resolveRepoUrl(packagePath);
+					const tagPrefix = ensureString(options.tagPrefix, { default: "" });
 
 					const errored = new Map();
 					await Promise.all(
@@ -23,7 +26,7 @@ module.exports = function (packagePath) {
 								promise.emit("start", version);
 								try {
 									await updateGithubRelease(
-										repoUrl, version, versionReleaseNotes
+										repoUrl, tagPrefix + version, versionReleaseNotes
 									).catch(error => {
 										if (!(error instanceof UserError)) throw error;
 										errored.set(version, error);

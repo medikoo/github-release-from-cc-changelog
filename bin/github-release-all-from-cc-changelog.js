@@ -8,6 +8,7 @@ const meta = require("../package");
 
 const argv = require("minimist")(process.argv.slice(2), {
 	boolean: ["help", "version"],
+	string: ["tag-prefix"],
 	alias: { help: "h", version: "v" }
 });
 
@@ -32,4 +33,4 @@ if (argv.version) {
 	return;
 }
 
-require("../lib/private/cli/all")();
+require("../lib/private/cli/all")({ tagPrefix: argv["tag-prefix"] || "" });
